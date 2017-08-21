@@ -29,7 +29,8 @@ I used a TDD approach using Mocha & Zombie. Overall coverage of the code was 94%
 
 I used Pug as I find it a nice and simple template over HTML.
 
-Coverage:
+**Coverage:**
+
 ![Coverage](./img/Coverage.png)
 
 ### Lessons Learned
@@ -46,18 +47,18 @@ Coverage:
 
 ### Screenshots
 
-Messages Page
+**Messages Page:**
 
 ![MessagesPage](./img/MessagesPage.png)
 
-New Message Creation
+**New Message Creation:**
 
 ![NewMessage](./img/NewMessage.png)
 
-Message Selection Page
+**Message Selection Page:**
 
 ![IndividualMessage](./img/IndividualMessage.png)
 
-Use in Terminal
+**Use in Terminal:**
 
 ![Terminal](./img/Terminal.png)
