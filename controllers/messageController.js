@@ -19,3 +19,8 @@ exports.getMessages = async (req, res) => {
   const messages = await Message.find();
   res.render('messages', { messages });
 }
+
+exports.showMessage = async (req, res) => {
+  const message = await Message.findOne({ _id: req.params.id })
+  res.render('showMessage', { message });
+}

@@ -1,9 +1,11 @@
 h1 Messages
-
+    
 p
   a(href="/messages/new") New Message
   
 .messages
   each message in messages
-    a(href=`/messsages/${messages._id}`) <br /> #{message.message}
+    a(href=`/messages/${message._id}`) <br /> #{message.message}
+
+
   
