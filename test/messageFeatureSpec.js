@@ -24,5 +24,9 @@ Browser.localhost('localhost', 2005);
       it('should see the link to the new message page', function() {
         browser.assert.text('p', 'New Message')
       });
+
+      it('expects to see a list of saved messages', function() {
+        browser.assert.text('.messages', 'Hello!');
+      });
     });
   })

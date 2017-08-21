@@ -24,5 +24,5 @@ Browser.localhost('localhost', 2005);
       it('should see the link to the message page', function() {
         browser.assert.text('p', 'See Messages')
       })
-    });  
+    });
   })

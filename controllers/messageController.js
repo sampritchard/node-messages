@@ -5,10 +5,6 @@ exports.homePage = (req, res) => {
   res.render('index');
 }
 
-exports.getMessages = (req, res) => {
-  res.render('messages');
-}
-
 exports.newMessage = (req, res) => {
   res.render('newMessage');
 }
@@ -18,3 +14,8 @@ exports.createMessage = async (req, res) => {
   await message.save();
   res.redirect('/messages');
 };
+
+exports.getMessages = async (req, res) => {
+  const messages = await Message.find();
+  res.render('messages', { messages });
+}

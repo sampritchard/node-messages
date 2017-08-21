@@ -1,11 +1,20 @@
 const Browser = require('zombie');
 var app = require('../app');
 var assert = require('assert');
+const mongoose = require('mongoose');
+const Message = mongoose.model('Message');
 
 Browser.localhost('localhost', 2005);
 
   describe('User visits the new message page', function() {
     const browser = new Browser();
+
+    //clear test Database
+    before((done) =>  {
+      mongoose.connection.db.dropDatabase(() => {
+        done();
+      });
+    })
 
     before(function() {
       return browser.visit('/messages/new');
@@ -21,10 +30,11 @@ Browser.localhost('localhost', 2005);
         browser.assert.element('form');
       });
 
-      it('redirects back to messages when a valid message entered', function() {
-        browser.fill('message', 'Hello!');
-        browser.pressButton('Save');
-        browser.assert.redirected
+      //creates new message and store in test database
+      it('creates a new message', async() => {
+        const message = await new Message({
+          message: 'Hello!'
+        }).save()
       })
     });
   })
