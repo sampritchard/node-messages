@@ -19,8 +19,12 @@ Browser.localhost('localhost', 2005);
 
       it('should see a new message form', function() {
         browser.assert.element('form');
+      });
+
+      it('redirects back to messages when a valid message entered', function() {
+        browser.fill('message', 'Hello!');
+        browser.pressButton('Save');
+        browser.assert.redirected
       })
-
     });
-
   })
