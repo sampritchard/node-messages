@@ -1,0 +1,25 @@
+{
+  "name": "messages",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "env NODE_ENV=development node ./app.js",
+    "test": "env NODE_ENV=test mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "assert": "^1.4.1",
+    "body-parser": "^1.17.2",
+    "chai": "^4.1.1",
+    "dotenv": "^4.0.0",
+    "express": "^4.15.4",
+    "mocha": "^3.5.0",
+    "mongoose": "^4.11.7",
+    "path": "^0.12.7",
+    "pug": "^2.0.0-rc.3",
+    "spec": "^1.0.1",
+    "zombie": "^5.0.7"
+  }
+}
