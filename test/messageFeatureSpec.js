@@ -17,9 +17,14 @@ Browser.localhost('localhost', 2005);
         browser.assert.success();
       })
 
-      it('should see the index page', function() {
+      it('should see the message heading', function() {
         browser.assert.text('h1', 'Messages')
       });
+
+      it('should see the link to the new message page', function() {
+        browser.assert.text('p', 'New Message')
+      });
+
     });
 
   })

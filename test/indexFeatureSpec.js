@@ -17,9 +17,12 @@ Browser.localhost('localhost', 2005);
         browser.assert.success();
       })
 
-      it('should see the index page', function() {
-      browser.assert.text('p', 'Welcome to Express')
+      it('should see the heading', function() {
+        browser.assert.text('h2', 'Welcome to The Simple Message App!')
       });
-    });
 
+      it('should see the link to the message page', function() {
+        browser.assert.text('p', 'See Messages')
+      })
+    });  
   })

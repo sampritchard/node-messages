@@ -7,3 +7,7 @@ exports.homePage = (req, res) => {
 exports.getMessages = (req, res) => {
   res.render('messages');
 }
+
+exports.newMessage = (req, res) => {
+  res.render('newMessage');
+}
