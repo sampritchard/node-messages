@@ -1,6 +1,10 @@
+[![Build Status](https://travis-ci.org/sampritchard/node-messages.svg?branch=master)](https://travis-ci.org/sampritchard/node-messages)
+
 # A Simple Plain Message Application Built in Node
 
-The task: Develop a simple web service which allows users to store and retrieve plain text messages.
+The task:
+
+Develop a simple web service which allows users to store and retrieve plain text messages.
 
 ## How to Run
 * Clone or download this repo to your local machine
@@ -25,6 +29,9 @@ I used a TDD approach using Mocha & Zombie. Overall coverage of the code was 94%
 
 I used Pug as I find it a nice and simple template over HTML.
 
+Coverage:
+![Coverage](./img/Coverage.png)
+
 ### Lessons Learned
 * I struggled originally with how to interact with my data and see if it was doing what was expected. This lesson really taught me the importance of being able to see, interact and manipulate your data comfortably, in order to make the most of saving and retrieving the correct data. I used **MongoDB Compass** to help with the interaction of the messages data I saved.
 * Setting up a test database at the start of the project would've been beneficial. I originally had only set up a Development database in Mongo, and it wasn't until I was testing data entry later that I realised I had no test database. Dropping the test database was also an essential skill I picked up in order to test correctly the stored messages.
@@ -40,13 +47,17 @@ I used Pug as I find it a nice and simple template over HTML.
 ### Screenshots
 
 Messages Page
+
 ![MessagesPage](./img/MessagesPage.png)
 
 New Message Creation
+
 ![NewMessage](./img/NewMessage.png)
 
 Message Selection Page
+
 ![IndividualMessage](./img/IndividualMessage.png)
 
 Use in Terminal
+
 ![Terminal](./img/Terminal.png)
