@@ -5,7 +5,7 @@ const messageSchema = new mongoose.Schema({
     type: String,
     trim: true,
     required: 'Please enter a message'
-  };
+  }
 });
 
 module.exports = mongoose.model('Message', messageSchema);
