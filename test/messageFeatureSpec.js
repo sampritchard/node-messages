@@ -9,20 +9,20 @@ Browser.localhost('localhost', 2005);
 
     before(function() {
       return browser.visit('/messages');
-    })
+    });
 
     describe('sees the message page', function() {
 
       it('should be successful', function() {
         browser.assert.success();
-      })
+      });
 
       it('should see the message heading', function() {
-        browser.assert.text('h1', 'Messages')
+        browser.assert.text('h1', 'Messages');
       });
 
       it('should see the link to the new message page', function() {
-        browser.assert.text('p', 'New Message')
+        browser.assert.text('p', 'New Message');
       });
 
       it('expects to see a list of saved messages', function() {

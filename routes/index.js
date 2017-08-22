@@ -2,7 +2,6 @@ const messageController = require('../controllers/messageController');
 const express = require('express');
 const router = express.Router();
 
-
 router.get('/', messageController.homePage);
 router.get('/messages', messageController.getMessages);
 router.get('/messages/new', messageController.newMessage);
