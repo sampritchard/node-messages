@@ -6,20 +6,20 @@ const Message = mongoose.model('Message');
 
 Browser.localhost('localhost', 2005);
 
-  describe('User visits the new message page', function() {
+  describe('User visits the new message page', () => {
     const browser = new Browser();
 
-    before(function() {
+    before(() => {
       return browser.visit('/messages/new');
     });
 
-    describe('sees the new message page', function() {
+    describe('sees the new message page', () => {
 
-      it('should be successful', function() {
+      it('should be successful', () => {
         browser.assert.success();
       });
 
-      it('should see a new message form', function() {
+      it('should see a new message form', () => {
         browser.assert.element('form');
       });
 
@@ -28,10 +28,9 @@ Browser.localhost('localhost', 2005);
         await browser.pressButton('Save');
       })
 
-      it('returns to the message page', async() => {
+      it('returns to the message page', async () => {
         browser.assert.text('.messages', 'Hello! Hello World')
       })
-
-
     });
+    
   })
