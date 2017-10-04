@@ -2,7 +2,6 @@ const express = require('express');
 var path = require('path');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const cookieParser = require('cookie-parser');
 
 require('./models/Message');
 
