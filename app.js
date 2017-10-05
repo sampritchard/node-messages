@@ -29,5 +29,5 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use('/', routes);
 
-module.exports = app;
-module.exports = mongoose;
+// module.exports = app;
+// module.exports = mongoose;
